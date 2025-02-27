@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tocador Musical</title>
+    <title>Alpha Sound</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+    
 <body>
     <div class="container">
         <div class="login-container" id="login-container">
@@ -18,16 +19,18 @@
             </select>
             <button id="login-button">Entrar</button>
         </div>
-        <div class="user-info" id="user-info" style="display: none;">
+        <div class="user-info" id="user-info">
             <h3 id="user-name"></h3>
             <p id="user-plan"></p>
+        </div>
+        <div class="logo" id="logo">
+            <h1>Alpha Sounds</h1>
         </div>
         <div class="music-list-container" id="music-list-container" style="display: none;">
             <h2>Músicas Armazenadas</h2>
             <ul id="music-list"></ul>
         </div>
         <div class="music-player" id="music-player" style="display: none;">
-            <h1>Tocador Musical</h1>
             <input type="file" id="file-input" accept="audio/*" />
             <audio id="audio" controls></audio>
             <div class="controls">
