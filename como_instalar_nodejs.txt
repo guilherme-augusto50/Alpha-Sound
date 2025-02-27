@@ -1,0 +1,2 @@
+1. instale o scoop: https://scoop.sh/
+2. rode no terminal: `scoop install git nodejs`
