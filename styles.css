@@ -10,7 +10,7 @@ body {
     color: #333;
     display: flex;
     justify-content: center;
-   align-items: end;
+    align-items: end;
     height: 100vh;
     padding: 20px;
 }
@@ -21,7 +21,8 @@ body {
     color: #333;
     display: flex;
     justify-content: center;
-   align-items: center;
+    align-items: center;
+    gap: 10px;
     height: 100vh;
     padding: 20px;
 }
@@ -30,38 +31,37 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     background-color: #ffffff;
     color: #333;
-    height: 80px; /* Definindo a altura da barra */
+    height: 80px;
     padding: 10px;
-    display: flex; /* Usando flexbox para alinhar o conteúdo */
-    justify-content: space-between; /* Espaço entre os itens */
-    align-items: flex-start; /* Alinha os itens no topo do container */
-    border: 1px solid #ddd; /* Borda para dar destaque à barra */
-    overflow: hidden; /* Impede que o conteúdo ultrapasse a altura definida */
-    position: fixed; /* Fixa a barra no topo da tela */
-    top: 0; /* Posiciona a barra no topo da tela */
-    left: 0; /* Garante que a barra vai começar do lado esquerdo */
-    width: 100%; /* Faz a barra ocupar toda a largura da tela */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 #user-name, #user-plan {
     margin: 0;
-    font-size: 24px; /* Ajuste o tamanho da fonte para algo mais adequado */
+    font-size: 24px;
 }
 
-#logo{
+#logo {
     font-family: 'Poppins', Arial, sans-serif;
-    background-color: #ffffff;
-    color: 333;
-    height: 20  px; /* Definindo a altura da barra */
-    padding: 10px;
-    display: flex; /* Usando flexbox para alinhar o conteúdo */
-    justify-content: center; /* Espaço entre os itens */
-    align-items: center; /* Alinha os itens no topo do container */
-    overflow: hidden; /* Impede que o conteúdo ultrapasse a altura definida */
-    position: fixed; /* Fixa a barra no topo da tela */
-    top: 0; /* Posiciona a barra no topo da tela */
-    left: 50%; /* Garante que a barra vai começar do lado esquerdo */
-    width: 50%; /* Faz a barra ocupar toda a largura da tela */
+    color: #333; 
+    height: 20px; 
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 50%;
     transform: translateX(-50%);
 }
 
@@ -75,9 +75,9 @@ body {
 
 .music-list-container {
     color: rgb(211, 210, 210);
-    max-height: 400px;
+    max-height: 500px;
     overflow-y: auto;
-    padding: 10px;
+    padding: 25px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.8);
@@ -89,13 +89,12 @@ body {
 
 .music-list-container::-webkit-scrollbar-thumb {
     background: #888;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .music-list-container::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-
 
 .music-player {
     position: relative;
@@ -105,22 +104,30 @@ body {
     justify-content: center;
     background: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 20px;
+    padding: 35px;
     border-radius: 10px;
     width: 100%;
 }
 
-
 .music-player::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     z-index: -1;
+}
+
+.music-player audio {
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+    width: 75%;
+    z-index: 1;
 }
 
 .controls {
@@ -132,26 +139,25 @@ body {
 }
 
 .controls button {
-    background: #1d9721; /* Cor de fundo */
-    color: white; /* Cor do ícone */
+    background: #1d9721;
+    color: white;
     border: none;
     padding: 10px 15px;
-    border-radius: 100%; /* Deixa o botão redondo */
+    border-radius: 100%;
     font-size: 25px;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
 }
 
 .controls button:hover {
-    background: #000000; /* Cor ao passar o mouse */
+    background: #000000;
 }
 
 .controls button i {
-    pointer-events: none; /* Evita problemas de clique nos ícones */
+    pointer-events: none;
 }
+
 .controls button:hover {
     background: #c02d2d;
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.1);
 }
-
-
