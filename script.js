@@ -39,12 +39,12 @@ function loadMusic() {
 }
 
 // Função para adicionar nova música
-fileInput.addEventListener('change', (event) => {
-    const file = event.target.files[0];
-    if (!file) return;
+    fileInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        if (!file) return;
 
-    const fileURL = URL.createObjectURL(file);
-    const musicName = file.name;
+        const fileURL = URL.createObjectURL(file);
+        const musicName = file.name;
 
     // Verificar se o usuário é gratuito e se já existem 10 músicas
     if (userPlan === 'free' && storedMusic.length >= 10) {
