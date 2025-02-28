@@ -1,0 +1,14 @@
+{
+  "name": "alpha-sound",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "node app/main.js",
+    "dev": "nodemon app/main.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
